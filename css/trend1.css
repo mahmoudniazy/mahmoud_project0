@@ -1,0 +1,480 @@
+/* -----------------start variables  */
+:root {
+    --buttom-border-color: rgba(255, 255, 255, 0.1);
+    --buttom-hover-color: rgba(255, 255, 255, 0.2);
+    --buttom-hover-border: rgba(255, 255, 255, 0.3);
+}
+/* -----------------end variables  */
+/* --------------main components  */
+.text {
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+}
+.text i {
+    margin-right: 20px;
+}
+.cards {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(300px,1fr));
+    gap: 20px;
+}
+.card {
+    padding: 20px;
+    text-align: end;
+    border-radius: 10px;
+    position: relative;
+    transition: .3s;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 10%);
+    cursor: pointer;
+}
+/* -------------- end main components  */
+
+/* -------------start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul {
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .container {  
+        width: 100%;
+    } 
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {  
+        width: 100%;
+    } 
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    } 
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+    } 
+}
+/* -------------end global rules */
+/* --------------------start time box  */
+.page {
+    padding: 60px;
+    background-image: url(../images/dark-mountains-landscape-nature.jpg);
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    color: white;
+    position: relative;
+}
+.page::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom , #ff000000 , #4c4c4c63 , #000000cf);
+}
+.page .container {
+    position: relative;
+    overflow: hidden;
+
+}
+.page .container .time-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+}
+.page .container .time-box .time-content {
+    display: flex;
+    width: 25%;
+    flex-wrap: wrap;
+}
+.page .container .time-box .time-content .time {
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgb(0 0 0 / 10%);
+}
+.page .container .time-box .time-content .temb {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 0px 20px 8px;
+    font-size: 23px;
+}
+.page .container .time-box .time-content .temb i {
+    color: rgb(252,216,52);
+    margin-right: 5px;
+}
+.page .container .time-box .time-content .temb span {
+    font-size: 16px;
+}
+.page .container .time-box .time-content .paragraph {
+    display: flex;
+    font-size: 18px;
+}
+.page .container .time-box .time-content .paragraph i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+.page .container .time-box .time-content .paragraph span {
+    color: black;
+}
+.page .container .time-box .exit {
+    display: grid;
+    place-content: center;
+    width: 100px;
+    height: 50px;
+    backdrop-filter: blur(3px);
+    background-color: var(--buttom-border-color);
+    border: 1px solid var(--buttom-border-color);
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 10%);
+    cursor: pointer;
+}
+.page .container .time-box .exit:hover {
+    background-color: var(--buttom-hover-color);
+    border: 1px solid var(--buttom-hover-border);
+}
+@media (min-width:768px) {
+    .page .container .time-box .time-content {
+        width: 40%;
+    }
+}
+@media (max-width:767px) {
+    .page .container .time-box .time-content .time {
+        font-size: 60px;
+    }
+    .page .container .time-box .time-content {
+        width: 80%;
+    }
+    .page {
+        padding: 25px;
+    }
+    .page .container .time-box .exit {
+        width: 60px;
+        height: 40px;
+    }
+}
+/* --------------------end time box  */
+/* --------------------start items  */
+.page .container .things {
+    color: white;
+    text-align: start;
+    display: flex;
+    flex-wrap: wrap;
+}
+.page .container .things .thing,
+.page .container .youtube {
+    width: fit-content;
+    padding: 10px 15px;
+    backdrop-filter: blur(3px);
+    background-color: var(--buttom-border-color);
+    border: 1px solid var(--buttom-border-color);
+    border-radius: 60px;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 10%);
+    cursor: pointer;
+    font-size: 18px;
+    margin: 20px 20px 0 0;
+}
+.page .container .things .thing:hover,
+.page .container .youtube:hover {
+    background-color: var(--buttom-hover-color);
+    border: 1px solid var(--buttom-hover-border);
+}
+.page .container .youtube i {
+    color: red;
+}
+/* --------------------end items */
+/* --------------------start weather  */
+.page .weather {
+    margin-top: 50px;
+}
+.page .weather .slider {
+    display: flex;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(180px,1fr));
+    gap: 20px; */
+    width: 120%;
+    margin-top: 30px;
+}
+.page .weather .slider .box {
+    padding: 20px;
+    width: 12%;
+    margin-right: 20px;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    backdrop-filter: blur(3px);
+    background-color: var(--buttom-border-color);
+    border: 1px solid var(--buttom-border-color);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 10%);
+    transition: .5s linear;
+}
+@media (max-width:991px) {
+    .page .weather .slider  {
+        width: 150%;
+    }
+    .page .weather .slider .box {
+        transition: 1s linear !important;
+    }
+    .page .weather .slider:hover .box {
+        transform: translateX(-325px) !important;
+    }
+}
+@media (max-width:767px) {
+    .page .weather .slider  {
+        width: 200%;
+    }
+    .page .weather .slider .box {
+        transition: 2s linear !important;
+    }
+    .page .weather .slider:hover .box {
+        transform: translateX(-560px) !important;
+    }
+}
+@media (max-width:500px) {
+    .page .weather .slider  {
+        width: 280%;
+    }
+    .page .weather .slider .box {
+        transition: 3s linear !important;
+    }
+    .page .weather .slider:hover .box {
+        transform: translateX(-600px) !important;
+    }
+}
+.page .weather .slider .icon {
+    margin: 40px 0;
+    position: relative;
+}
+.page .weather .slider .icon i {
+    font-size: 45px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+.page .weather .slider .icon .first {
+    color: rgb(252,216,52);
+}
+.page .weather .slider .icon .blue {
+    color: rgb(67,164,245);
+}
+.page .weather .slider:hover .box {
+    transform: translateX(-120px);
+}
+/* --------------------end weather  */
+/* --------------------start food  */
+.page .foods {
+    margin-top: 40px;
+}
+.page .foods .cards .card:hover {
+    transform: translateY(-10px);
+}
+.page .foods .cards .card:hover .content {
+    transform: translateY(-10px);
+}
+.page .foods .cards .card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom , #ff000000 , #4c4c4c63 , #000000cf);
+}
+.page .foods .cards>:nth-child(1) {
+    background-image: url(../images/best-burger-restaurant-places-in-cairo-696x365.jpg);
+}
+.page .foods .cards>:nth-child(2) {
+    background-image: url(../images/from-the-us-russia-to-india-an-ice-cream-bowl-has-a-long-political-history.jpg);
+}
+.page .foods .cards>:nth-child(3) {
+    background-image: url(../images/hot-and-spicy-pizza__637722374299259904.jpg);
+}
+.page .foods .cards>:nth-child(4) {
+    background-image: url(../images/getlstd-property-photo.jpg);
+}
+.page .foods .cards .card .content {
+    margin-top: 130px;
+    position: relative;
+    transition: .3s;
+}
+.page .foods .cards .card .content p {
+    color: rgb(60,145,213);
+    font-weight: bold;
+    font-size: 19px;
+}
+/* --------------------end food -------- */
+/* --------------------start App -------- */
+.page .app {
+    margin-top: 40px;
+}
+.page .app .app-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(200px,1fr));
+    gap: 20px;
+}
+.page .app .app-cards .app-card {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-size: cover;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 10%);
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+}
+.page .app .app-cards .app-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left , #ff000000 , #4c4c4c63 , #000000cf);
+}
+.page .app .app-cards .app-card:hover {
+    transform: translateY(-5px);
+}
+.page .app .app-cards .app-card .content {
+    position: relative;
+}
+.page .app .app-cards .app-card h3 {
+    font-size: 17px;
+    color: rgb(67,165,243) !important;
+}
+.page .app .app-cards .app-card p {
+    font-size: 23px;
+    margin-top: 5px;
+}
+.page .app .app-cards .app-card i {
+    font-size: 40px;
+    margin-top: 30px;
+}
+.page .app .app-cards>:nth-child(1) {
+    background-image: url(../images/cloud-storm-cloudy-blue.jpg);
+}
+.page .app .app-cards>:nth-child(2) {
+    background-image: url(../images/iStock-966248982.jpg);
+
+}
+.page .app .app-cards>:nth-child(3) {
+    background-image: url(../images/170406-spring-savings-mn-1435.jpg);
+}
+.page .app .app-cards>:nth-child(4) {
+    background-image: url(../images/traveling-with-asthma-allergies-on-planes-or-trains.png);
+}
+.page .app .app-cards>:nth-child(5) {
+    background-image: url(../images/killone-mercenary-card-image-768w.jpg);
+}
+.page .app .app-cards>:nth-child(6) {
+    background-image: url(../images/dreamstime_xxl_134047411.jpg);
+}
+/* --------------------end App -------- */
+/* --------------------start popcorn -------- */
+.page .container .popcorn {
+    margin-top: 40px;
+}
+.page .container .popcorn .cards .card {
+    text-align: start;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+.page .container .popcorn .cards .card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: .5s;
+}
+.page .container .popcorn .cards .card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+.page .container .popcorn .cards .card i {
+    font-size: 80px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+.page .container .popcorn .cards .card p {
+    margin-bottom: 470px;
+}
+.page .container .popcorn .cards>:nth-child(1)::after {
+    background: linear-gradient(to top, rgba(42, 252, 152, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+}
+.page .container .popcorn .cards>:nth-child(2) img {
+    width: 150%;
+    left: -85px;
+}
+.page .container .popcorn .cards>:nth-child(2)::after{
+    background: linear-gradient(to top, rgba(239, 83, 80, 0.4), transparent, rgba(0, 0, 0, 0.4));
+}
+.page .container .popcorn .cards>:nth-child(3) img {
+    width: 150%;
+    left: -85px;
+}
+.page .container .popcorn .cards>:nth-child(3)::after {
+    background: linear-gradient(to top, rgb(162 53 53 / 71%), transparent, rgba(0, 0, 0, 0.4));
+}
+.page .container .popcorn .cards>:nth-child(4)::after {
+    background: linear-gradient(to top, rgba(57, 73, 171, 0.4), transparent, rgba(0, 0, 0, 0.4));
+}
+.page .container .popcorn .cards .card h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.page .container .popcorn .cards .card .content {
+    position: relative;
+    z-index: 4;
+}
+.page .container .popcorn .cards .card:hover {
+    transform: translateY(-5px);
+}
+.page .container .popcorn .cards .card:hover img{
+    transform: scale(1.07);
+}
+.page .container .popcorn .cards .card:hover i {
+    font-size: 150px;
+    bottom: 50px;
+    right: 50px;
+    transition: .5s;
+}
+/* --------------------end popcorn -------- */
